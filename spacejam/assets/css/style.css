@@ -26,3 +26,14 @@ body {
   width:1000px;
   padding-bottom: 30px;
 }
+
+.p {
+  height: 500px;
+}
+
+.d-flex {
+  display: flex!important;
+  justify-content: space-between;
+  align-items: flex-end;
+
+}
