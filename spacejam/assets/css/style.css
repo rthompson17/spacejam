@@ -1,69 +1,28 @@
-/* .container {
-    position: relative;
-    text-align: center;
-    color: black;
-  }
-
-  .studio {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-  } */
-
-  /* Container holding the image and the text */
-.container {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  
-  /* Bottom left text */
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-  }
-  
-  /* Top left text */
-  .top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-  }
-  
-  /* Top right text */
-  .top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-  }
-  
-  /* Bottom right text */
-  .bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-  }
-  
-  /* Centered text */
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-
-
-
-
-  .thumbnail {
-    position: relative;
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #040404;
+  color: #fff;
+  position: relative;
+  background: transparent;
 }
 
-.caption {
-    position: absolute;
-    top: 45%;
-    left: 0;
-    width: 100%;
+/* @media (max-width: 992px) {
+  .bg-image.justify-content-center.align-items-center {
+    width:900px;
+  }
+} */
+
+
+.bg-image {
+  height: 100%;
+  width:auto;
+  background-size:contain;
+  object-position: center;
+
+}
+
+.body .container {
+  height:50vh;
+  width:auto;
+  
 }
