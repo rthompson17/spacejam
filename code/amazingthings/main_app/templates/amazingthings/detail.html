@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Details of the Amazing Things</h1>
+
+<div class="row">
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ amazingthing.name }}</span>
+        <p>Name: {{ amazingthing.name }}</p>
+        <p>Location: {{ amazingthing.location }}</p>
+        {% if amazingthing.age > 0 %}
+          <p>Description: {{ amazingthing.description }}</p>
+        {% else %}
+          <p>Age: Unknown</p>
+        {% endif %}
+      </div>
+      <div class="card-action">
+        <a href="{% url 'things_update' amazingthing.id %}">Edit</a>
+        <a href="{% url 'things_delete' amazingthing.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+  <div class="col s6">
+
+    <form method="post" action="{% url 'add_events' amazingthing.id %}">
+        {% csrf_token %}
+        {{ events_form.as_p }}
+        <input type="submit" class="btn" value="Add Event">
+      </form>
+
+    <table class="striped">
+      <thead>
+        <tr><th>Date</th><th>Event</th></tr>
+      </thead>
+      <tbody>
+        {% for events in amazingthing.events_set.all %}
+          <tr>
+            <td>{{events.date}}</td>
+            <td>{{events.get_type_display}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr>
+<div class="row">
+  <div class="col s6">
+    <h3>{{ amazingthing.name }}'s Programs</h3>
+    {% if amazingthing.programs.count %}
+      {% for program in amazingthing.programs.all %}
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+                <span style="color:blueviolet">{{ program.name }}</span>
+                <p>{{ program.kind }}</p>
+              </span>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>No Programs</h5>
+    {% endif %}
+  </div>
+</div>
+
+<div class="col s6">
+    <h3>Available Programs</h3>
+    {% if programs.count %}
+      {% for program in programs.all %}
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">
+              <span style="color:blueviolet">{{ program.name }}</span>
+              <p>{{ program.kind }}</p>
+            </span>
+          </div>
+          <div class="card-action">
+            <form action="{% url 'assoc_program' amazingthing.id program.id %}" method="post"> 
+              {% csrf_token %}
+              <button type="submit" class="btn">Add</button>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>{{thing.name}} Already Has All Programs Available</h5>
+    {% endif %}
+  </div>
+
+
+
+<script>
+    const dateEl = document.getElementById('id_date');
+    M.Datepicker.init(dateEl, {
+      format: 'yyyy-mm-dd',
+      defaultDate: new Date(),
+      setDefaultDate: true,
+      autoClose: true
+    });
+
+    const selectEl = document.getElementById('id_type');
+    M.FormSelect.init(selectEl);
+</script>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos</title>
+  </head>
+  <body>
+    <h1>Todos</h1>
+    <a href="/todos/new">Create Todo</a>
+    <ul>
+      <% todos.forEach(function(t) { %>
+        <a href="/todos/<%= t.id %>"><li><%= t.todo %> - <%= t.done ? 'done' : 'not done' %>
+        </li></a>
+       
+        <li>
+            <form action="/todos/<%= t.id %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button type="submit">DELETE<% t.todo %></button>
+              </form>
+        </li>
+        <% }); %>
+    </ul>
+  </body>
+</html>

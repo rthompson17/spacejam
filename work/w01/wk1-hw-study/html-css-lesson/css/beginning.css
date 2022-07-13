@@ -1,0 +1,18 @@
+h1, span {
+    color:brown;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    justify-self: center;
+}
+
+#FunTimes {
+    color: blue;
+}
+
+#comments-title {
+    font-size: 28px;
+}
+
+.not-unique {
+    color  :cornflowerblue;
+}
+/* Set the size of the font to 28px on the element with an id="comments-title" */

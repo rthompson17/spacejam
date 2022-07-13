@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px 50px 50px 100px;
+  height: 300px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+h1 {
+  color: darkslateblue;
+  text-align: center;
+  /* font-family: "Permanent Marker", cursive; */
+  font-family: 'Urbanist', sans-serif;
+  border: 2px solid darkslateblue;
+}
+
+h3 {
+  color: rgb(103, 83, 150);
+  text-align: center;
+  font-family: Urbanist, sans-serif;
+}
+
+header {
+  font-size: 6vmin;
+  padding: 1vmin;
+  background-color: var(--accent-dark);
+  color: white;
+  text-align: center;
+  letter-spacing: 0.5vmin;
+}
+
+main {
+  display: block;
+  height: 500px;
+  width: 800px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: thistle;
+}
+
+aside {
+  background-color: #a2b4da;
+  grid-column: 1 / 3;
+}
+
+.gameBoard {
+  display: flex;
+  align-items: flex-start;
+  align-content: space-between;
+  justify-content: flex-start;
+  background-image: url("../images/map-image2.png");
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+}
+
+.flex-ctr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apartment {
+  background-color: #a2cbb6;
+  width: 80px;
+  height: auto;
+  margin-left:70px;
+  margin-top: -65px;
+}
+
+.explosion {
+  width: 25px;
+}
+ul {
+  position: absolute;
+  text-align: center;
+  width: 285px;
+  margin-left: 500px;
+  margin-right: auto;
+  margin-top: 100px;
+  font-family: Urbanist, sans-serif;
+}
+
+#timer {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  left: 540px;
+  top: 10px;
+  font-family: Urbanist, sans-serif;
+}
+
+#subway {
+  display: flex;
+  width: 50px;
+  height: auto;
+  margin-left: 100px;
+  margin-top: -50px;
+}
+
+
+#MentalHealth {
+  position: relative;
+  left: 570px;
+  top: -30px;
+  background-color: rgb(121, 173, 159);
+  text-align: center;
+  line-height: 0px;
+  color: white;
+  font-family: Bitter, serif;
+  border-radius: 7px;
+}
+
+#healthLevel {
+position:static;
+}
+
+
+#playerGirl {
+  width: 25px;
+  height: auto;
+  position: relative;
+    left: 149px;
+    top: 406px;
+  /* margin-left: -50px;
+  margin-bottom: 50px;
+  flex-direction: column; */
+  
+}
+
+#winLose {
+  position:fixed;
+  text-align: center;
+  left: 625px;
+  top: 400px;
+  font-size: large;
+}
+
+div.men img {
+  display: flex;
+  width: 15px;
+  height: auto;
+  filter:invert(100%);
+  -webkit-filter: saturate(40%);
+}
+
+#man1 {
+  width: 15px;
+  height: auto;
+  margin-left: 181px;
+  margin-bottom: 26px;
+  filter:invert(100%);
+  -webkit-filter: saturate(40%);
+}
+
+#man2 {
+  width: 15px;
+  height: auto;
+  margin-left: 182px;
+  margin-bottom: 35px;
+  filter: saturate(40%);
+}
+
+#man3 {
+  width: 15px;
+  height: auto;
+  margin-left: 140px;
+  margin-bottom: 33px;
+  filter:invert(100%);
+  -webkit-filter: saturate(40%);
+}
+
+#man4 {
+  width: 15px;
+  height: auto;
+  margin-left: 145px;
+  margin-bottom: 38px;
+  filter: saturate(40%);
+}
+
+#man5 {
+  width: 15px;
+  height: auto;
+  margin-left: 182px;
+  margin-bottom: 23px;
+  filter:invert(100%);
+  -webkit-filter: saturate(40%);
+}
+
+
+
+
+/* MODAL 1 */
+.hidden { display:none; }
+
+.pageCover { 
+  position:fixed; 
+  z-index:10; 
+  background-color:rgba(0,0,0,.25); 
+  width:100vw; 
+  height:100vh; 
+  top:0; 
+  left:0;
+}
+
+.modal { 
+  position:absolute; 
+  z-index:100; 
+  background-color:aliceblue;
+  border:2px double grey;
+  width:200px; 
+  height:200px; 
+  top:30%; 
+  left:30%; 
+  text-align:center;
+}
+
+.modalTitle {
+  margin:0;
+  background-color:#00a;
+  color:#ff0;
+  padding:5px;
+  font-weight:bold;
+  font-size:1.1em;
+}
+
+
+#close { 
+  background-color:#800080;
+  color:#ff0;
+  border:1px solid #e0e0e0;
+  padding:5px 10px;
+}
+
+#close:hover { background-color:#c000c0; }
+
+
+/* MODAL 2 */
+.pageCover2 { 
+  position:fixed; 
+  z-index:10; 
+  background-color:rgba(0,0,0,.25); 
+  width:100vw; 
+  height:100vh; 
+  top:0; 
+  left:0;
+}
+
+.modal2 { 
+  position:absolute; 
+  z-index:100; 
+  background-color:aliceblue;
+  border:2px double grey;
+  width:200px; 
+  height:200px; 
+  top:30%; 
+  left:30%; 
+  text-align:center;
+}
+
+.modalTitle2 {
+  margin:0;
+  background-color: orange;
+  color:#ff0;
+  padding:5px;
+  font-weight:bold;
+  font-size:1.1em;
+}
+
+
+#close2 { 
+  background-color:orange;
+  color:#ff0;
+  border:1px solid #e0e0e0;
+  padding:5px 10px;
+}
+
+#close2:hover { background-color:#c000c0; }
+
+
+/* MODAL 3 */
+.pageCover3 { 
+  position:fixed; 
+  z-index:10; 
+  background-color:rgba(0,0,0,.25); 
+  width:100vw; 
+  height:100vh; 
+  top:0; 
+  left:0;
+}
+
+.modal3 { 
+  position:absolute; 
+  z-index:100; 
+  background-color:aliceblue;
+  border:2px double grey;
+  width:200px; 
+  height:200px; 
+  top:30%; 
+  left:30%; 
+  text-align:center;
+}
+
+.modalTitle3 {
+  margin:0;
+  background-color:green;
+  color:#ff0;
+  padding:5px;
+  font-weight:bold;
+  font-size:1.1em;
+}
+
+
+#close3 { 
+  background-color:green;
+  color:#ff0;
+  border:1px solid #e0e0e0;
+  padding:5px 10px;
+}
+
+#close3:hover { background-color:#c000c0; }
