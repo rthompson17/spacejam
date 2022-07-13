@@ -22,7 +22,7 @@ body {
 }
 
 .body .container {
-  height:50vh;
+  height:95vh;
   width:auto;
-  
+  padding-bottom: 30px;
 }
