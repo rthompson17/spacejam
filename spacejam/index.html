@@ -41,7 +41,18 @@
           #intro {
             height: 600px;
           }
+
         }
+
+        /* not currently working */
+        @media (max-width: 992px) {
+          #intro .container #home p.col-xl-4 {
+            margin-top: 175px;
+          }
+        }
+
+       
+      
       </style>
     
       <!-- Navbar -->
@@ -83,10 +94,10 @@
       <div
         id="intro"
         class="text-center bg-image"
-        style="background-image: url('img/terry_studio.png');background-size:cover;"
+        style="background-image: url('img/terry_studio.png');background-size:cover;height:100vh;"
       >
       <div class="container">
-      <div class="row d-flex justify-content-center">
+      <div id="home" class="row d-flex justify-content-center">
         <!-- <h1 class="text-white col-xl-4" style="position:absolute;z-index:2;margin-top: 200px;">CAVE DIVER</h1> -->
         <img src="img/cd-temp-title copy.png" class="col-xl-4" style="width:50%;position:absolute;z-index:0;margin-top:240px;">
         <p class="col-xl-4" style="width:50%;position:absolute;z-index:0;margin-top:325px;color:white">Brief bio stuff goes here Brief bio stuff goes here Brief bio stuff goes here Brief bio stuff goes here Brief bio stuff goes here</p>
@@ -94,10 +105,8 @@
     </div>
 
         <div class="mask hover-overlay ripple" style="max-width:50%;">
-          <div class="d-flex justify-content-center align-items-end h-100">
+          <div class="d-flex justify-content-center align-items-end h-75">
             <div class="text-white">
-              <!-- <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
-              <h5 class="mb-4">Best & free guide of responsive web design</h5> -->
               <a
                 class="btn btn-lg m-5 hover-overlay ripple"
                 data-mdb-ripple-color="light"
@@ -113,7 +122,7 @@
         </div>
         
         <div class="mask-2 img-fluid hover-overlay ripple" style="height:inherit;width:50%;float:right!important;position:relative;z-index:100">
-          <div class="d-flex justify-content-center align-items-end h-100" style="position:relative;z-index:-100">
+          <div class="d-flex justify-content-center align-items-end h-100" style="position:relative;z-index:-100; padding-bottom: 190px;">
             <div class="text-white" style="z-index:1">
 
               <!-- <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
@@ -136,26 +145,17 @@
     </header>
 
 
-    <!-- End your project here-->
-
-
-
-
+    <footer class="bg-dark text-center text-white fixed-bottom" style="height:100px">
+      <!-- Copyright -->
+   <div class="text-center p-3 text-white-50" style="background-color:black;font-size:x-small">
+     © 2022 Copyright CAVE DIVER  <a class="text-white-50" href="https:www.ryannthompson.com"> |  Website by Ryann Thompson</a>
+   </div>
+   <!-- Copyright -->
+ </footer>
 
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
   </body>
-
-
-
-  <footer class="bg-dark text-center text-white">
-     <!-- Copyright -->
-  <div class="text-center p-3" style="background-color:black;">
-    © 2022 Copyright: Website by
-    <a class="text-white-50" href="https:www.ryannthompson.com">Ryann Thompson</a>
-  </div>
-  <!-- Copyright -->
-</footer>
 </html>
